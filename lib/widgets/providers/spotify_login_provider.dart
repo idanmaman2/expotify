@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:igals_expotify/widgets/debug_widgets/debug_all.dart';
 import 'package:igals_expotify/widgets/screens/main_frame.dart';
 import 'package:spotify/spotify.dart';
 import 'package:igals_expotify/objects/spot.dart';
 
 class SpotifyLoginProvider extends ChangeNotifier {
-  Future nextScreen(context) async {
+  Future nextScreenDebug(context) async {
     Future.delayed(const Duration(milliseconds: 10)).then((_) async {
       SpotifyApi spotify = SpotifyApiSingelton.getSpotInstance();
       var me = await spotify.me.get();
       String displayName = me.displayName ?? "IDK";
       //var top_songs_in_country =
       //  await spotify.categories.newReleases(country: me.country).all();
-     final popular_songs = (await spotify.me.recentlyPlayed(limit: 50).all())
+      final popular_songs = (await spotify.me.recentlyPlayed(limit: 50).all())
           .map((e) => e.track?.name ?? "IDK");
       final my_albums = await (spotify.me.savedAlbums()).all();
       final my_eposides = await (spotify.me.savedEpisodes()).all();
@@ -27,7 +28,7 @@ class SpotifyLoginProvider extends ChangeNotifier {
       Navigator.push<void>(
           context,
           MaterialPageRoute<void>(
-              builder: (BuildContext context) => MainFrame(
+              builder: (BuildContext context) => DebugAll(
                   top_playlist_in_country: top_playlist_in_country,
                   top_tracks: top_tracks,
                   my_playlists: my_playlists,
@@ -36,6 +37,16 @@ class SpotifyLoginProvider extends ChangeNotifier {
                   my_albums: my_albums,
                   popular_songs: popular_songs,
                   my_eposides: my_eposides)));
+    });
+  }
+
+  void nextScreen(context) {
+    Future.delayed(const Duration(milliseconds: 10)).then((_) async {
+      Navigator.pop(context);
+      Navigator.push<void>(
+          context,
+          MaterialPageRoute<void>(
+              builder: (BuildContext context) => MainFrame()));
     });
   }
 }

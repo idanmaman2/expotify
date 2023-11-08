@@ -1,5 +1,6 @@
 import 'package:spotify/spotify.dart';
 import 'package:igals_expotify/objects/spot.dart';
+// one simple track object that unit every option that spotify provide ... IDK 
 
 class TrackSpot {
   late String? name;
@@ -21,7 +22,7 @@ class TrackSpot {
         id = x.id,
         uri = x.uri,
         singersFullName = x.artists!.map((x) => x.name!);
-        
+
   TrackSpot.fromTrackSimple(TrackSimple x)
       : name = x.name,
         id = x.id,

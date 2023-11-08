@@ -1,0 +1,169 @@
+Date : 2023-11-08 18:42:47
+Directory : /Users/idang/expotify/expotify/igals_expotify
+Total : 78 files,  2212 codes, 306 comments, 367 blanks, all 2885 lines
+
+Languages
++-----------------+------------+------------+------------+------------+------------+
+| language        | files      | code       | comment    | blank      | total      |
++-----------------+------------+------------+------------+------------+------------+
+| Dart            |         30 |        703 |         29 |         78 |        810 |
+| C++             |         16 |        531 |        121 |        182 |        834 |
+| XML             |         10 |        463 |         48 |         12 |        523 |
+| JSON            |          4 |        248 |          0 |          4 |        252 |
+| Groovy          |          3 |         94 |          5 |         22 |        121 |
+| Swift           |          6 |         52 |          7 |         20 |         79 |
+| HTML            |          1 |         38 |         16 |          6 |         60 |
+| CMake           |          2 |         36 |          0 |         12 |         48 |
+| YAML            |          2 |         26 |         80 |         20 |        126 |
+| Markdown        |          2 |         13 |          0 |          9 |         22 |
+| Java Properties |          2 |          8 |          0 |          2 |         10 |
++-----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                        | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                           |         78 |      2,212 |        306 |        367 |      2,885 |
+| . (Files)                                                                                                   |          3 |         36 |         80 |         27 |        143 |
+| android                                                                                                     |         12 |        161 |         51 |         33 |        245 |
+| android (Files)                                                                                             |          3 |         46 |          0 |         11 |         57 |
+| android/app                                                                                                 |          8 |        110 |         51 |         21 |        182 |
+| android/app (Files)                                                                                         |          1 |         51 |          5 |         12 |         68 |
+| android/app/src                                                                                             |          7 |         59 |         46 |          9 |        114 |
+| android/app/src/debug                                                                                       |          1 |          3 |          4 |          1 |          8 |
+| android/app/src/main                                                                                        |          5 |         53 |         38 |          7 |         98 |
+| android/app/src/main (Files)                                                                                |          1 |         27 |          6 |          1 |         34 |
+| android/app/src/main/res                                                                                    |          4 |         26 |         32 |          6 |         64 |
+| android/app/src/main/res/drawable                                                                           |          1 |          4 |          7 |          2 |         13 |
+| android/app/src/main/res/drawable-v21                                                                       |          1 |          4 |          7 |          2 |         13 |
+| android/app/src/main/res/values                                                                             |          1 |          9 |          9 |          1 |         19 |
+| android/app/src/main/res/values-night                                                                       |          1 |          9 |          9 |          1 |         19 |
+| android/app/src/profile                                                                                     |          1 |          3 |          4 |          1 |          8 |
+| android/gradle                                                                                              |          1 |          5 |          0 |          1 |          6 |
+| android/gradle/wrapper                                                                                      |          1 |          5 |          0 |          1 |          6 |
+| ios                                                                                                         |          8 |        229 |          4 |         13 |        246 |
+| ios/Runner                                                                                                  |          7 |        222 |          2 |          9 |        233 |
+| ios/Runner (Files)                                                                                          |          2 |         13 |          0 |          3 |         16 |
+| ios/Runner/Assets.xcassets                                                                                  |          3 |        148 |          0 |          4 |        152 |
+| ios/Runner/Assets.xcassets/AppIcon.appiconset                                                               |          1 |        122 |          0 |          1 |        123 |
+| ios/Runner/Assets.xcassets/LaunchImage.imageset                                                             |          2 |         26 |          0 |          3 |         29 |
+| ios/Runner/Base.lproj                                                                                       |          2 |         61 |          2 |          2 |         65 |
+| ios/RunnerTests                                                                                             |          1 |          7 |          2 |          4 |         13 |
+| lib                                                                                                         |         29 |        689 |         19 |         71 |        779 |
+| lib (Files)                                                                                                 |          1 |         31 |          0 |          9 |         40 |
+| lib/design                                                                                                  |          1 |         17 |          0 |          1 |         18 |
+| lib/objects                                                                                                 |          2 |         45 |          2 |         10 |         57 |
+| lib/utils                                                                                                   |          2 |         74 |          2 |          8 |         84 |
+| lib/utils/data                                                                                              |          1 |         16 |          0 |          2 |         18 |
+| lib/utils/storage                                                                                           |          1 |         58 |          2 |          6 |         66 |
+| lib/widgets                                                                                                 |         23 |        522 |         15 |         43 |        580 |
+| lib/widgets (Files)                                                                                         |          1 |         64 |          2 |          7 |         73 |
+| lib/widgets/cards                                                                                           |          7 |         38 |          0 |         10 |         48 |
+| lib/widgets/debug_widgets                                                                                   |          2 |        105 |          0 |          7 |        112 |
+| lib/widgets/parts                                                                                           |          2 |        109 |          1 |          8 |        118 |
+| lib/widgets/parts (Files)                                                                                   |          1 |        102 |          1 |          6 |        109 |
+| lib/widgets/parts/provider                                                                                  |          1 |          7 |          0 |          2 |          9 |
+| lib/widgets/providers                                                                                       |          2 |         47 |          2 |          5 |         54 |
+| lib/widgets/screens                                                                                         |          9 |        159 |         10 |          6 |        175 |
+| linux                                                                                                       |          6 |        112 |         27 |         44 |        183 |
+| linux (Files)                                                                                               |          3 |         86 |         18 |         27 |        131 |
+| linux/flutter                                                                                               |          3 |         26 |          9 |         17 |         52 |
+| macos                                                                                                       |          6 |        444 |          5 |         16 |        465 |
+| macos/Flutter                                                                                               |          1 |          6 |          3 |          4 |         13 |
+| macos/Runner                                                                                                |          4 |        431 |          0 |          8 |        439 |
+| macos/Runner (Files)                                                                                        |          2 |         20 |          0 |          6 |         26 |
+| macos/Runner/Assets.xcassets                                                                                |          1 |         68 |          0 |          1 |         69 |
+| macos/Runner/Assets.xcassets/AppIcon.appiconset                                                             |          1 |         68 |          0 |          1 |         69 |
+| macos/Runner/Base.lproj                                                                                     |          1 |        343 |          0 |          1 |        344 |
+| macos/RunnerTests                                                                                           |          1 |          7 |          2 |          4 |         13 |
+| test                                                                                                        |          1 |         14 |         10 |          7 |         31 |
+| web                                                                                                         |          2 |         73 |         16 |          7 |         96 |
+| windows                                                                                                     |         11 |        454 |         94 |        149 |        697 |
+| windows/flutter                                                                                             |          3 |         26 |          9 |         17 |         52 |
+| windows/runner                                                                                              |          8 |        428 |         85 |        132 |        645 |
++-------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| filename                                                                                                    | language        | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| /Users/idang/expotify/expotify/igals_expotify/README.md                                                     | Markdown        |         10 |          0 |          7 |         17 |
+| /Users/idang/expotify/expotify/igals_expotify/analysis_options.yaml                                         | YAML            |          3 |         22 |          4 |         29 |
+| /Users/idang/expotify/expotify/igals_expotify/android/app/build.gradle                                      | Groovy          |         51 |          5 |         12 |         68 |
+| /Users/idang/expotify/expotify/igals_expotify/android/app/src/debug/AndroidManifest.xml                     | XML             |          3 |          4 |          1 |          8 |
+| /Users/idang/expotify/expotify/igals_expotify/android/app/src/main/AndroidManifest.xml                      | XML             |         27 |          6 |          1 |         34 |
+| /Users/idang/expotify/expotify/igals_expotify/android/app/src/main/res/drawable-v21/launch_background.xml   | XML             |          4 |          7 |          2 |         13 |
+| /Users/idang/expotify/expotify/igals_expotify/android/app/src/main/res/drawable/launch_background.xml       | XML             |          4 |          7 |          2 |         13 |
+| /Users/idang/expotify/expotify/igals_expotify/android/app/src/main/res/values-night/styles.xml              | XML             |          9 |          9 |          1 |         19 |
+| /Users/idang/expotify/expotify/igals_expotify/android/app/src/main/res/values/styles.xml                    | XML             |          9 |          9 |          1 |         19 |
+| /Users/idang/expotify/expotify/igals_expotify/android/app/src/profile/AndroidManifest.xml                   | XML             |          3 |          4 |          1 |          8 |
+| /Users/idang/expotify/expotify/igals_expotify/android/build.gradle                                          | Groovy          |         27 |          0 |          5 |         32 |
+| /Users/idang/expotify/expotify/igals_expotify/android/gradle.properties                                     | Java Properties |          3 |          0 |          1 |          4 |
+| /Users/idang/expotify/expotify/igals_expotify/android/gradle/wrapper/gradle-wrapper.properties              | Java Properties |          5 |          0 |          1 |          6 |
+| /Users/idang/expotify/expotify/igals_expotify/android/settings.gradle                                       | Groovy          |         16 |          0 |          5 |         21 |
+| /Users/idang/expotify/expotify/igals_expotify/ios/Runner/AppDelegate.swift                                  | Swift           |         12 |          0 |          2 |         14 |
+| /Users/idang/expotify/expotify/igals_expotify/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json   | JSON            |        122 |          0 |          1 |        123 |
+| /Users/idang/expotify/expotify/igals_expotify/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json | JSON            |         23 |          0 |          1 |         24 |
+| /Users/idang/expotify/expotify/igals_expotify/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md     | Markdown        |          3 |          0 |          2 |          5 |
+| /Users/idang/expotify/expotify/igals_expotify/ios/Runner/Base.lproj/LaunchScreen.storyboard                 | XML             |         36 |          1 |          1 |         38 |
+| /Users/idang/expotify/expotify/igals_expotify/ios/Runner/Base.lproj/Main.storyboard                         | XML             |         25 |          1 |          1 |         27 |
+| /Users/idang/expotify/expotify/igals_expotify/ios/Runner/Runner-Bridging-Header.h                           | C++             |          1 |          0 |          1 |          2 |
+| /Users/idang/expotify/expotify/igals_expotify/ios/RunnerTests/RunnerTests.swift                             | Swift           |          7 |          2 |          4 |         13 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/design/color.dart                                         | Dart            |         17 |          0 |          1 |         18 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/main.dart                                                 | Dart            |         31 |          0 |          9 |         40 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/objects/spot.dart                                         | Dart            |         13 |          1 |          4 |         18 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/objects/track_object.dart                                 | Dart            |         32 |          1 |          6 |         39 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/utils/data/spotify.dart                                   | Dart            |         16 |          0 |          2 |         18 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/utils/storage/spotify.dart                                | Dart            |         58 |          2 |          6 |         66 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/cards/album.dart                                  | Dart            |          0 |          0 |          1 |          1 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/cards/artist.dart                                 | Dart            |          0 |          0 |          1 |          1 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/cards/eposide.dart                                | Dart            |          0 |          0 |          1 |          1 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/cards/playlist.dart                               | Dart            |          0 |          0 |          1 |          1 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/cards/preview.dart                                | Dart            |         38 |          0 |          4 |         42 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/cards/show.dart                                   | Dart            |          0 |          0 |          1 |          1 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/cards/song.dart                                   | Dart            |          0 |          0 |          1 |          1 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/debug_widgets/debug_all.dart                      | Dart            |         73 |          0 |          5 |         78 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/debug_widgets/section.dart                        | Dart            |         32 |          0 |          2 |         34 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/parts/preview_section.dart                        | Dart            |        102 |          1 |          6 |        109 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/parts/provider/preview_section_provider.dart      | Dart            |          7 |          0 |          2 |          9 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/providers/main_frame_provider.dart                | Dart            |          0 |          0 |          1 |          1 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/providers/spotify_login_provider.dart             | Dart            |         47 |          2 |          4 |         53 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/screens/albums_of_artist.dart                     | Dart            |          0 |          1 |          1 |          2 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/screens/choose_playlsit.dart                      | Dart            |          0 |          1 |          0 |          1 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/screens/export.dart                               | Dart            |          0 |          2 |          1 |          3 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/screens/main_frame.dart                           | Dart            |        159 |          0 |          3 |        162 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/screens/recommendations.dart                      | Dart            |          0 |          1 |          0 |          1 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/screens/saved_in_account.dart                     | Dart            |          0 |          2 |          0 |          2 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/screens/search.dart                               | Dart            |          0 |          1 |          0 |          1 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/screens/songs_select.dart                         | Dart            |          0 |          1 |          1 |          2 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/screens/user_data.dart                            | Dart            |          0 |          1 |          0 |          1 |
+| /Users/idang/expotify/expotify/igals_expotify/lib/widgets/spotify_login.dart                                | Dart            |         64 |          2 |          7 |         73 |
+| /Users/idang/expotify/expotify/igals_expotify/linux/flutter/generated_plugin_registrant.cc                  | C++             |          3 |          4 |          5 |         12 |
+| /Users/idang/expotify/expotify/igals_expotify/linux/flutter/generated_plugin_registrant.h                   | C++             |          5 |          5 |          6 |         16 |
+| /Users/idang/expotify/expotify/igals_expotify/linux/flutter/generated_plugins.cmake                         | CMake           |         18 |          0 |          6 |         24 |
+| /Users/idang/expotify/expotify/igals_expotify/linux/main.cc                                                 | C++             |          5 |          0 |          2 |          7 |
+| /Users/idang/expotify/expotify/igals_expotify/linux/my_application.cc                                       | C++             |         74 |         11 |         20 |        105 |
+| /Users/idang/expotify/expotify/igals_expotify/linux/my_application.h                                        | C++             |          7 |          7 |          5 |         19 |
+| /Users/idang/expotify/expotify/igals_expotify/macos/Flutter/GeneratedPluginRegistrant.swift                 | Swift           |          6 |          3 |          4 |         13 |
+| /Users/idang/expotify/expotify/igals_expotify/macos/Runner/AppDelegate.swift                                | Swift           |          8 |          0 |          2 |         10 |
+| /Users/idang/expotify/expotify/igals_expotify/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json | JSON            |         68 |          0 |          1 |         69 |
+| /Users/idang/expotify/expotify/igals_expotify/macos/Runner/Base.lproj/MainMenu.xib                          | XML             |        343 |          0 |          1 |        344 |
+| /Users/idang/expotify/expotify/igals_expotify/macos/Runner/MainFlutterWindow.swift                          | Swift           |         12 |          0 |          4 |         16 |
+| /Users/idang/expotify/expotify/igals_expotify/macos/RunnerTests/RunnerTests.swift                           | Swift           |          7 |          2 |          4 |         13 |
+| /Users/idang/expotify/expotify/igals_expotify/pubspec.yaml                                                  | YAML            |         23 |         58 |         16 |         97 |
+| /Users/idang/expotify/expotify/igals_expotify/test/widget_test.dart                                         | Dart            |         14 |         10 |          7 |         31 |
+| /Users/idang/expotify/expotify/igals_expotify/web/index.html                                                | HTML            |         38 |         16 |          6 |         60 |
+| /Users/idang/expotify/expotify/igals_expotify/web/manifest.json                                             | JSON            |         35 |          0 |          1 |         36 |
+| /Users/idang/expotify/expotify/igals_expotify/windows/flutter/generated_plugin_registrant.cc                | C++             |          3 |          4 |          5 |         12 |
+| /Users/idang/expotify/expotify/igals_expotify/windows/flutter/generated_plugin_registrant.h                 | C++             |          5 |          5 |          6 |         16 |
+| /Users/idang/expotify/expotify/igals_expotify/windows/flutter/generated_plugins.cmake                       | CMake           |         18 |          0 |          6 |         24 |
+| /Users/idang/expotify/expotify/igals_expotify/windows/runner/flutter_window.cpp                             | C++             |         49 |          7 |         16 |         72 |
+| /Users/idang/expotify/expotify/igals_expotify/windows/runner/flutter_window.h                               | C++             |         20 |          5 |          9 |         34 |
+| /Users/idang/expotify/expotify/igals_expotify/windows/runner/main.cpp                                       | C++             |         30 |          4 |         10 |         44 |
+| /Users/idang/expotify/expotify/igals_expotify/windows/runner/resource.h                                     | C++             |          9 |          6 |          2 |         17 |
+| /Users/idang/expotify/expotify/igals_expotify/windows/runner/utils.cpp                                      | C++             |         54 |          2 |         10 |         66 |
+| /Users/idang/expotify/expotify/igals_expotify/windows/runner/utils.h                                        | C++             |          8 |          6 |          6 |         20 |
+| /Users/idang/expotify/expotify/igals_expotify/windows/runner/win32_window.cpp                               | C++             |        210 |         24 |         55 |        289 |
+| /Users/idang/expotify/expotify/igals_expotify/windows/runner/win32_window.h                                 | C++             |         48 |         31 |         24 |        103 |
+| Total                                                                                                       |                 |      2,212 |        306 |        367 |      2,885 |
++-------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+

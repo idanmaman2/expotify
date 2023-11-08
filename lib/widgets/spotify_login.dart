@@ -63,8 +63,7 @@ class _SpotifyLogin extends StatelessWidget {
                 );
               }
               Provider.of<SpotifyLoginProvider>(context, listen: false)
-                  .nextScreen(context)
-                  .then((value) => print("cool shit "));
+                  .nextScreen(context);     
             }
             return const Center(child:FittedBox(child:CircularProgressIndicator()));
           }),

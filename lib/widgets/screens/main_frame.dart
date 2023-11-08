@@ -1,146 +1,159 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:igals_expotify/objects/spot.dart';
+import 'package:igals_expotify/widgets/cards/preview.dart';
+import 'package:igals_expotify/widgets/parts/preview_section.dart';
+import 'package:spotify/spotify.dart';
 
 class MainFrame extends StatelessWidget {
-  final Iterable my_eposides,
-      my_albums,
-      popular_songs,
-      top_artists,
-      my_shows,
-      my_playlists,
-      top_tracks,
-      top_playlist_in_country;
-
-  const MainFrame(
-      {required this.top_playlist_in_country,
-      required this.top_tracks,
-      required this.my_playlists,
-      required this.my_shows,
-      required this.top_artists,
-      required this.my_albums,
-      required this.popular_songs,
-      required this.my_eposides,
-      super.key});
+  const MainFrame({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
-              "IDK WE WILL SEE ${SpotifyApiSingelton.getSpotInstance().me.toString()}"),
+          title: const Center(
+              child: Text("Expotify",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w100,
+                      fontSize: 30,
+                      fontFeatures: [FontFeature.enable('smcp')]))),
         ),
-        body: Column(
+        body: ListView(
           children: [
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView(
-                        scrollDirection: Axis.vertical,
-                        children: List.generate(
-                            my_albums.length,
-                            (index) => Text(
-                                my_albums.skip(index).first.name ?? "IDK")),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView(
-                        scrollDirection: Axis.vertical,
-                        children: List.generate(popular_songs.length,
-                            (index) => Text(popular_songs.skip(index).first)),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView(
-                        scrollDirection: Axis.vertical,
-                        children: List.generate(
-                            my_eposides.length,
-                            (index) => Text(
-                                my_eposides.skip(index).first.name ?? "IDK")),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView(
-                        scrollDirection: Axis.vertical,
-                        children: List.generate(
-                            my_shows.length,
-                            (index) =>
-                                Text(my_shows.skip(index).first.name ?? "IDK")),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            PreviewSection(
+              nextScreen: const Text("IDK"),
+              title: "My PlayLists",
+              previewElments: (() async {
+                var x = await SpotifyApiSingelton.getSpotInstance()
+                    .playlists
+                    .me
+                    .all();
+                return x.map((e) => PreviewCard(
+                    defaultImage: "assets/images/no_playlist.jpg",
+                    imageUrl: e.images?.firstOrNull?.url,
+                    further: const Text("IDK"),
+                    title: e.name ?? "IDK"));
+              })(),
             ),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView(
-                        scrollDirection: Axis.vertical,
-                        children: List.generate(
-                            my_playlists.length,
-                            (index) => Text(
-                                my_playlists.skip(index).first.name ?? "IDK")),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView(
-                        scrollDirection: Axis.vertical,
-                        children: List.generate(
-                            top_tracks.length,
-                            (index) => Text(
-                                top_tracks.skip(index).first.name ?? "IDK")),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView(
-                        scrollDirection: Axis.vertical,
-                        children: List.generate(
-                            top_playlist_in_country.length,
-                            (index) => Text(top_playlist_in_country
-                                    .skip(index)
-                                    .first
-                                    .name ??
-                                "IDK")),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      child: ListView(
-                        scrollDirection: Axis.vertical,
-                        children: List.generate(
-                            top_artists.length,
-                            (index) => Text(
-                                top_artists.skip(index).first.name ?? "IDK")),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            PreviewSection(
+              nextScreen: const Text("IDK"),
+              title: "My Albums",
+              previewElments: (() async {
+                var x = await SpotifyApiSingelton.getSpotInstance()
+                    .me
+                    .savedAlbums()
+                    .all();
+                return x.map((e) => PreviewCard(
+                    defaultImage: "assets/images/no_playlist.jpg",
+                    imageUrl: e.images?.firstOrNull?.url,
+                    further: const Text("IDK"),
+                    title: e.name ?? "IDK"));
+              })(),
+            ),
+            PreviewSection(
+              nextScreen: const Text("IDK"),
+              title: "My Eposides",
+              previewElments: (() async {
+                var x = await SpotifyApiSingelton.getSpotInstance()
+                    .me
+                    .savedEpisodes()
+                    .all();
+                return x.map((e) => PreviewCard(
+                    defaultImage: "assets/images/no_playlist.jpg",
+                    imageUrl: e.images?.firstOrNull?.url,
+                    further: const Text("IDK"),
+                    title: e.name ?? "IDK"));
+              })(),
+            ),
+            PreviewSection(
+              nextScreen: const Text("IDK"),
+              title: "My Shows",
+              previewElments: (() async {
+                var x = await SpotifyApiSingelton.getSpotInstance()
+                    .me
+                    .savedShows()
+                    .all(10);
+                return x.map((e) => PreviewCard(
+                    defaultImage: "assets/images/no_playlist.jpg",
+                    imageUrl: e.images?.firstOrNull?.url,
+                    further: const Text("IDK"),
+                    title: e.name ?? "IDK"));
+              })(),
+            ),
+            PreviewSection(
+              nextScreen: const Text("IDK"),
+              title: "Recommended PlayLists",
+              previewElments: (() async {
+                return (await SpotifyApiSingelton.getSpotInstance()
+                        .playlists
+                        .featured
+                        .all(5))
+                    .take(5)
+                    .map((e) => PreviewCard(
+                        defaultImage: "assets/images/no_playlist.jpg",
+                        imageUrl: e.images?.firstOrNull?.url,
+                        further: const Text("IDK"),
+                        title: e.name ?? "IDK"));
+              })(),
+            ),
+            PreviewSection(
+              nextScreen: const Text("IDK"),
+              title: "Recommended Artist",
+              previewElments: (() async {
+                return (await SpotifyApiSingelton.getSpotInstance()
+                        .me
+                        .topArtists()
+                        .all(5))
+                    .take(5)
+                    .map((e) => PreviewCard(
+                        defaultImage: "assets/images/no_playlist.jpg",
+                        imageUrl: e.images?.firstOrNull?.url,
+                        further: const Text("IDK"),
+                        title: e.name ?? "IDK"));
+              })(),
+            ),
+            PreviewSection(
+              nextScreen: const Text("IDK"),
+              title: "Recommended Albums",
+              previewElments: (() async {
+                return (await SpotifyApiSingelton.getSpotInstance()
+                        .me
+                        .topTracks()
+                        .all(5))
+                    .take(5)
+                    .map((e) => e.album)
+                    .map((e) => PreviewCard(
+                        defaultImage: "assets/images/no_playlist.jpg",
+                        imageUrl: e?.images?.firstOrNull?.url,
+                        further: const Text("IDK"),
+                        title: e?.name ?? "IDK"));
+              })(),
+            ),
+            PreviewSection(
+              nextScreen: const Text("IDK"),
+              title: "Recently Played Albums",
+              previewElments: (() async {
+                var spotify = SpotifyApiSingelton.getSpotInstance();
+                var data = (await spotify.me.recentlyPlayed(limit: 50).all(5))
+                    .take(50)
+                    .map((e) async =>
+                        (await spotify.tracks.get(e.track!.id!)).album);
+                var res = Map<String?, AlbumSimple?>();
+                for (var i in data) {
+                  if (res.length >= 5) {
+                    break;
+                  }
+                  var element = await i;
+                  res[element?.id] = element;
+                }
+                Iterable<AlbumSimple?> resF = res.values.take(5);
+                return resF.map((e) => PreviewCard(
+                    defaultImage: "assets/images/no_playlist.jpg",
+                    imageUrl: e?.images?.first.url,
+                    further: const Text("IDK"),
+                    title: e?.name ?? "IDK"));
+              })(),
             ),
           ],
         ));
